@@ -6,8 +6,6 @@ import nb from "../../assets/nb.png";
 import adidas from "../../assets/adidas.png";
 import nike from "../../assets/nike.png";
 import tick from "../../assets/tick.png";
-
-
 import "./Reasons.css"
 
 export default function Reason() {

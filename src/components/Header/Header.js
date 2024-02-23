@@ -5,9 +5,9 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 
 export default function Header() {
-
+     const [menuOpened, setMenuOpened] = useState(false);     
      const mobile = window.innerWidth <= 768 ? true : false;
-     const [menuOpened, setMenuOpened] = useState(false);
+     
      return (
           <div className="header" >
                <img className="logo" src={Logo} alt="" />
@@ -30,7 +30,7 @@ export default function Header() {
                               <li >
                                    <Link
                                         onClick={() => setMenuOpened(false)}
-                                        to="Home"
+                                        to="home"
                                         span={true}
                                         smooth={true}
                                    >
@@ -48,14 +48,17 @@ export default function Header() {
                                    </Link>
                               </li>
 
-                              <li onClick={() => setMenuOpened(false)}>
+                              <li>
                                    <Link 
-                                     to="Why us"
+                                     onClick={() => setMenuOpened(false)}
+                                     to="reasons"
                                      span={true}
                                      smooth={true}
+                                     
                                    >
+                                    Why us
                                    </Link>
-                                   Why us</li>
+                                   </li>
                               <li >
                                    <Link 
                                       onClick={() => setMenuOpened(false)}
